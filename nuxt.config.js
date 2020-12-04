@@ -27,6 +27,12 @@ export default {
         // link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     },
     /*
+     ** CSS Style Resources
+     */
+    styleResources: {
+        scss: ['@/assets/styles/resources/_variables.scss', '@/assets/styles/resources/_mixins.scss', '@/assets/styles/resources/_functions.scss', '@/assets/styles/resources/_breakpoints.scss'],
+    },
+    /*
      ** Global CSS
      */
     css: ['@/assets/styles/app.scss'],

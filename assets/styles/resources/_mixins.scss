@@ -9,22 +9,14 @@
             font-size: $min-font-size;
 
             @media (min-width: $min-viewport-width) {
-                font-size: calc(#{$min-font-size} + #{strip-unit(
- $max-font-size - $min-font-size)
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-viewport-width}) / #{strip-unit($max-viewport-width - $min-viewport-width)}));
             }
 
-            * ((100vw - #{$min-viewport-width}) / #{strip-unit(
- $max-viewport-width - $min-viewport-width)
+            @media (min-width: $max-viewport-width) {
+                font-size: $max-font-size;
+            }
         }
-
-        ));
-    }
-
-    @media (min-width: $max-viewport-width) {
-        font-size: $max-font-size;
-    }
-}
-}
+    }   
 }
 
 @mixin respond-to($name) {

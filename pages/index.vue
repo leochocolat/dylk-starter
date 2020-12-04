@@ -1,6 +1,8 @@
 <template>
     <div class="page-home">
-        Home
+        <BlockDummy
+            :data="{ title: 'Home', image: 'assets/images/dylk/bg.jpg' }"
+        />
     </div>
 </template>
 
