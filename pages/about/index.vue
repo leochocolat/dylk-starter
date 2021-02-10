@@ -1,7 +1,7 @@
 <template>
     <div class="page-about">
         <BlockDummy
-            :data="{ title: 'About', image: 'assets/images/dylk/bolos.png' }"
+            :data="{ title: 'About', image: '/images/dylk/bolos.png' }"
         />
     </div>
 </template>

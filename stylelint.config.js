@@ -29,20 +29,7 @@ module.exports = {
             {
                 groupName: 'typography',
                 emptyLineBefore: 'always',
-                properties: [
-                    'font-family',
-                    'src',
-                    'font-weight',
-                    'font-size',
-                    'line-height',
-                    'letter-spacing',
-                    'color',
-                    'text-align',
-                    'text-transform',
-                    'text-decoration',
-                    'vertical-align',
-                    'white-space',
-                ],
+                properties: ['font-family', 'src', 'font-weight', 'font-size', 'line-height', 'letter-spacing', 'color', 'text-align', 'text-transform', 'text-decoration', 'vertical-align', 'white-space'],
             },
             {
                 groupName: 'visual',

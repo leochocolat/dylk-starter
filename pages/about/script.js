@@ -1,3 +1,7 @@
+// Vendor
+import gsap from 'gsap';
+
+// Mixins
 import page from '@/mixins/page';
 
 export default {
@@ -5,22 +9,31 @@ export default {
 
     methods: {
         transitionInit() {
-            console.log('transition init');
+            gsap.set(this.$el, { alpha: 0 });
         },
 
         firstReveal(done, routeInfos) {
-            console.log('first reveal', routeInfos);
-            done();
+            const timeline = gsap.timeline({ onComplete: done });
+
+            timeline.to(this.$el, 0.5, { alpha: 1, ease: 'circ.inOut' });
+
+            return timeline;
         },
 
         transitionIn(done, routeInfos) {
-            console.log('transition in', routeInfos);
-            done();
+            const timeline = gsap.timeline({ onComplete: done });
+
+            timeline.to(this.$el, 0.5, { alpha: 1, ease: 'circ.inOut' });
+
+            return timeline;
         },
 
         transitionOut(done, routeInfos) {
-            console.log('transition out', routeInfos);
-            done();
+            const timeline = gsap.timeline({ onComplete: done });
+
+            timeline.to(this.$el, 0.5, { alpha: 0, ease: 'circ.inOut' });
+
+            return timeline;
         },
     },
 };

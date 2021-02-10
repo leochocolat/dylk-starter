@@ -2,7 +2,7 @@
     <div class="container">
         <h1>{{ data.title }}</h1>
         <div class="image-container">
-            <img :src="require(`~/${data.image}`)" alt="" />
+            <img :src="data.image" alt="" />
         </div>
     </div>
 </template>
